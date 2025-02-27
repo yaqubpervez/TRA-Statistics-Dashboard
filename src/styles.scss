@@ -1,0 +1,926 @@
+/* You can add global styles to this file, and also import other style files */
+
+/* Importing Bootstrap SCSS file. */
+@import "bootstrap/scss/bootstrap";
+@import "../node_modules/@angular/material/prebuilt-themes/deeppurple-amber.css";
+@import "utilities";
+
+html,
+body {
+  height: 100%;
+}
+body {
+  margin: 0;
+  font-family: "Manrope", sans-serif !important;
+}
+
+::-webkit-scrollbar {
+  width: 8px;
+  height: 6px;
+  padding: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #d6d6d6;
+  border-radius: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #f0f0f0;
+}
+
+.custom-shadow {
+  box-shadow: 0 -2px 4px rgba(0, 0, 0, 0.1), 0 2px 4px rgba(0, 0, 0, 0.1),
+    0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1000px) and (max-width: 1200px) {
+  .kpi-svg {
+    height: 80px;
+    width: 80px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 19px;
+    font-weight: 700;
+  }
+
+  .dpt-logo {
+    height: 43px;
+    width: 43px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 16px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+}
+
+@media (min-width: 1200px) and (min-height: 600px) and (max-height: 700px) {
+  .kpi-svg {
+    height: 80px;
+    width: 80px;
+  }
+  // .kpi-table {
+  //   tr:not(:last-child) {
+  //     td {
+  //       padding-bottom: 2px !important;
+  //     }
+  //   }
+  // }
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .dpt-logo {
+    height: 42px;
+    width: 42px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 13px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 10px;
+  }
+  .feature-title {
+    th {
+      font-size: 13px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .layer-title {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
+@media (min-height: 701px) and (max-height: 750px)
+{
+  // .kpi-table {
+  //   tr:not(:last-child) {
+  //     td {
+  //       padding-bottom: 8px !important;
+  //     }
+  //   }
+  // }
+}
+
+@media (min-height: 751px) and (max-height: 800px)
+{
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 8px !important;
+      }
+    }
+  }
+
+}
+
+@media (min-height: 701px) and (max-height: 800px) {
+  .kpi-svg {
+    height: 84px;
+    width: 84px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  
+  .Kpi-svg_text {
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 43px;
+    width: 43px;
+    object-fit: contain;
+  }
+
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    font-size: 18px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 12px;
+  }
+  .feature-title {
+    th {
+      font-size: 14px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+
+  .layer-title {
+    font-size: 15px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 13px;
+    font-weight: 700;
+  }
+}
+
+@media (min-height: 801px) and (max-height: 900px) {
+  .kpi-svg {
+    height: 98px;
+    width: 98px;
+  }
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 10px !important;
+      }
+    }
+  }
+  .svg_text {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 53px;
+    width: 53px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 13px;
+  }
+  .feature-title {
+    th {
+      font-size: 16px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .layer-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+@media (min-height: 901px) and (max-height: 1000px) {
+  .kpi-svg {
+    height: 105px;
+    width: 105px;
+  }
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 12px !important;
+      }
+    }
+  }
+  .svg_text {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 17px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 53px;
+    width: 53px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    margin-top: 10px;
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 14px;
+  }
+  .feature-title {
+    th {
+      font-size: 16px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .layer-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+@media (min-height: 1001px) and (max-height: 1100px) {
+  .kpi-svg {
+    height: 120px;
+    width: 120px;
+  }
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 18px !important;
+      }
+    }
+  }
+  .svg_text {
+    color: black;
+    font-size: 20px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 58px;
+    width: 58px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    margin-top: 10px;
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 14px;
+  }
+  .feature-title {
+    th {
+      font-size: 16px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .layer-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+@media (min-height: 1101px) and (max-height: 1200px) {
+  .kpi-svg {
+    height: 130px;
+    width: 130px;
+  }
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 18px !important;
+      }
+    }
+  }
+  .svg_text {
+    color: black;
+    font-size: 22px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 67px;
+    width: 67px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 20px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 22px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    margin-top: 10px;
+    font-size: 24px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 16px;
+  }
+  .feature-title {
+    th {
+      font-size: 18px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .layer-title {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 17px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 15px;
+    font-weight: 700;
+  }
+}
+
+////////////// tablet screens///////////////////////////////////////////////////////////////////////////////////////////
+// ipad pro
+
+@media (min-width: 1000px) and (max-width: 1100px) and (min-height: 1300px) and (max-height: 1400px) {
+  .kpi-svg {
+    height: 90px;
+    width: 90px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .dpt-logo {
+    height: 47px;
+    width: 47px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    font-size: 19px;
+    font-weight: 800;
+  }
+
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 16px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+
+  .table-adjust td {
+    font-size: 11px;
+  }
+  .feature-title {
+    th {
+      font-size: 14px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+
+  .layer-title {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+// ipad pro landscape
+@media (min-width: 1300px) and (max-width: 1400px) and (min-height: 1000px) and (max-height: 1100px) {
+  .kpi-svg {
+    height: 97px;
+    width: 97px;
+  }
+  .kpi-table {
+    tr:not(:last-child) {
+      td {
+        padding-bottom: 30px !important;
+      }
+    }
+  }
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dpt-logo {
+    height: 53px;
+    width: 53px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .kpi-blank {
+    background-color: #fff !important;
+    color: #fff;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+  }
+  .floting-div {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .Agency-Statistics {
+    margin-top: 10px;
+    font-size: 19px;
+    font-weight: 800;
+  }
+  .table-adjust td {
+    font-size: 12px;
+  }
+  .feature-title {
+    th {
+      font-size: 14px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+  .legend-text {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+// ipad / ipad mini
+
+@media (min-width: 700px) and (max-width: 800px) and (min-height: 1000px) and (max-height: 1100px) {
+  .kpi-svg {
+    height: 85px;
+    width: 85px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 14px;
+    font-weight: 700;
+  }
+
+  .dpt-logo {
+    height: 43px;
+    width: 43px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 14px;
+  }
+  .Agency-Statistics {
+    font-size: 19px;
+    font-weight: 700;
+  }
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 14px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px; /* Adjust the value as needed */
+    border-top-right-radius: 10px; /* Adjust the value as needed */
+  }
+  .table-adjust td {
+    font-size: 9.5px;
+  }
+  .feature-title {
+    th {
+      font-size: 12px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+
+  .layer-title {
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 11px;
+    font-weight: 700;
+  }
+}
+
+// ipad Air
+
+@media (min-width: 800px) and (max-width: 900px) and (min-height: 1100px) and (max-height: 1200px) {
+  .kpi-svg {
+    height: 85px;
+    width: 85px;
+  }
+
+  .dpt-logo {
+    height: 40px;
+    width: 40px;
+    object-fit: contain;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 14px;
+  }
+  .Agency-Statistics {
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 14px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px; /* Adjust the value as needed */
+    border-top-right-radius: 10px; /* Adjust the value as needed */
+  }
+
+  .table-adjust td {
+    font-size: 10px;
+  }
+  .feature-title {
+    th {
+      font-size: 12px;
+      line-break: initial;
+      font-weight: 800;
+    }
+  }
+
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+
+  .layer-title {
+    font-size: 13px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 10px;
+    font-weight: 700;
+  }
+}
+
+// ipad Air landscape
+
+@media (min-width: 1100px) and (max-width: 1200px) and (min-height: 800px) and (max-height: 900px) {
+  .kpi-svg {
+    height: 85px;
+    width: 85px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .Agency-Statistics {
+    font-size: 19px;
+    font-weight: 900;
+  }
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 15px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .table-adjust td {
+    font-size: 12px;
+  }
+  .feature-title {
+    th {
+      font-size: 14px;
+      line-break: initial;
+      font-weight: 900;
+    }
+  }
+  .layer-title {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 16px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 12px;
+    font-weight: 700;
+  }
+}
+
+// ipad / ipad mini landscape
+
+@media (min-width: 1000px) and (max-width: 1100px) and (min-height: 700px) and (max-height: 800px) {
+  .kpi-svg {
+    height: 85px;
+    width: 85px;
+  }
+  .svg_text {
+    color: black;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .Kpi-svg_text {
+    color: black;
+    font-size: 16px;
+    font-weight: 700;
+  }
+  .dpt-name {
+    font-size: 14px;
+    font-weight: 800;
+  }
+  .floting-div {
+    font-size: 16px;
+    font-weight: 900;
+  }
+  .Agency-Statistics {
+    font-size: 18px;
+    font-weight: 900;
+  }
+  .kpi-blank {
+    background-color: rgb(44, 48, 132) !important;
+    color: #fff;
+    font-size: 16px !important;
+  }
+  .kpi-title-border {
+    min-height: 10px;
+    background-color: rgb(44, 48, 132);
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+  }
+  .table-adjust td {
+    font-size: 11px;
+  }
+  .feature-title {
+    th {
+      font-size: 14px;
+      line-break: initial;
+      font-weight: 900;
+    }
+  }
+  .layer-title {
+    font-size: 14px;
+    font-weight: 900;
+  }
+  .feature-title {
+    font-size: 15px;
+    font-weight: 800;
+  }
+  .legend-text {
+    font-size: 11px;
+    font-weight: 700;
+  }
+}

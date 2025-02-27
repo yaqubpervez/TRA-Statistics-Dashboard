@@ -1,0 +1,40 @@
+
+table {
+  // width: 100%;
+  border-collapse: collapse;
+}
+th,
+td {
+  border: 1px solid black;
+  padding: 0;
+  text-align: center;
+  box-sizing: border-box;
+}
+th {
+  background-color: #f2f2f2;
+}
+
+.kpi-table th,
+.kpi-table td {
+  border: none;
+}
+
+.kpi-table-one th,
+.kpi-table-one td {
+  border: none;
+}
+
+.kpi-table-head {
+  tr {
+    font-size: 14px;
+    font-weight: 700;
+  }
+}
+
+.last-row {
+  border-top: double 3px #000;
+}
+
+.shape-text {
+  color: #fff;
+}

@@ -1,0 +1,81 @@
+
+<div class="container-fluid">
+  <table class="feature-table mt-2">
+    <tr class="first-row">
+      <td class="left-border col-2 feature-title">Features</td>
+      <td colspan="2" class="bottom-double-border">
+        <div class="d-flex">
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <img class="feature-logo" src="assets/e-route.png" alt="" />
+            <span class="feature-title ps-2" style="color: RGB(0,32,96);">E-Route</span>
+          </div>
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <img class="feature-logo" src="assets/d-route.png" alt="" />
+            <span class="feature-title ps-2" style="color: RGB(56,87,35);">D-Route</span>
+          </div>
+          <div class="col-4 d-flex justify-content-center align-items-center">
+            <img class="feature-logo" src="assets/community.png" alt="" />
+            <span class="feature-title ps-2" >Communities</span>
+          </div>
+        </div>
+      </td>
+      <td class="bottom-double-border right-border col-2 feature-title" style="color: RGB(56,87,35);">
+        Grand Total
+      </td>
+    </tr>
+    <tr *ngFor="let feature of featureStatistics; let i = index">
+      <td class="left-border">
+        <div class="d-flex  justify-content-start align-items-center" >
+          <div class="col-4">
+            <img class="layer-logo" [src]=feature.logo alt="" />
+          </div>
+          <div class="col-6">
+            <span class="layer-title ps-1">{{feature.featuretype}}</span>
+          </div>
+          
+        
+          
+        </div>
+        
+      </td>
+      <td colspan="2">
+        <div class="d-flex ">
+          <div class="col-4 d-flex justify-content-center align-items-center" *ngFor="let location of feature.locationcount; let idx = index">
+          <div  class="custom-shape ">
+            <svg width="130" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+              <polygon points="15,0 185,0 199,15 199,35 185,50 15,50 1,35 1,15" 
+                       style="fill:#F8F9F9;stroke:green;stroke-width:1.5;" />
+              <text class="svg_text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle" >
+     
+                <ng-container *ngIf="i < 2">
+                  {{ location | number: '1.0-0' }} km
+                </ng-container>
+                <ng-container *ngIf="i >= 2">
+                  {{ location | number: '1.0-0' }}
+                </ng-container>
+              </text>
+            </svg>
+            </div>
+          </div>
+  
+        </div>
+      </td>
+      <td class="right-border">
+        <div  class="custom-shape ">
+          <svg width="130" height="50" viewBox="0 0 200 50" xmlns="http://www.w3.org/2000/svg">
+            <polygon points="15,0 185,0 199,15 199,35 185,50 15,50 1,35 1,15" 
+                     style="fill:#F8F9F9;stroke:green;stroke-width:1.5;" />
+            <text class="svg_text" x="50%" y="50%" dominant-baseline="middle" text-anchor="middle">
+              <ng-container *ngIf="i < 2">
+                {{ feature.grand | number:'1.0-0' }} km
+              </ng-container>
+              <ng-container *ngIf="i >= 2">
+                {{ feature.grand | number:'1.0-0' }}
+              </ng-container>
+            </text>
+          </svg>
+        </div>
+      </td>
+    </tr>
+  </table>
+</div> 

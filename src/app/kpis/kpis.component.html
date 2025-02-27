@@ -1,0 +1,68 @@
+<div class="d-flex flex-column h-83">
+  <div class="d-none d-lg-block d-md-block d-xl-none kpi-title-border"></div>
+
+  <table class="kpi-table col-12 h-100">
+    <thead class="kpi-table-head">
+      <tr class="feature-title">
+        <th class="kpi-blank">Departments KPIs</th>
+        <th style="border-right: 3px solid white">GIS Layer</th>
+        <th style="border-right: 3px solid white">
+          Data <br />
+          Completness
+        </th>
+        <th>
+          Data <br />
+          Accuracy
+        </th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr
+        *ngFor="let kpis of transformKpis; let i = index"
+        [ngClass]="{ 'last-row': i === transformKpis.length - 1 }"
+      >
+        <td class="col-3">
+          <div
+            class="d-flex flex-column justify-content-center align-items-center mt-2"
+          >
+            <ng-container *ngIf="kpis.logo !== undefined">
+              <img class="dpt-logo" [src]="kpis.logo" alt="" />
+            </ng-container>
+
+            <span class="dpt-name" [ngStyle]="{ color: logoTextColor[i] }">{{
+              kpis.dptName
+            }}</span>
+          </div>
+        </td>
+        <td class="col-3" *ngFor="let data of kpis.data">
+          <svg
+            class="kpi-svg"
+            viewBox="0 0 100 100"
+            xmlns="http://www.w3.org/2000/svg"
+          >
+            <polygon
+              points="24,16 76,16 99,36 99,64 76,84 24,84 1,64 1,36"
+              style="fill: #f8f9f9; stroke: green; stroke-width: 1.5"
+            />
+            <text
+              class="Kpi-svg_text"
+              x="50%"
+              y="50%"
+              dominant-baseline="middle"
+              text-anchor="middle"
+              fill="black"
+            >
+              {{ data }}
+            </text>
+          </svg>
+        </td>
+      </tr>
+    </tbody>
+  </table>
+  <div
+    class="d-flex justify-content-center align-items-center Agency-Statistics pb-2"
+  >
+    <div class="col-3 pb-2"></div>
+    <span> Agency Statistics </span>
+  </div>
+</div>
